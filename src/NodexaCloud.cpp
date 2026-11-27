@@ -1882,7 +1882,7 @@ Response Client::sendHeartbeat(bool readBody) {
       ",\"ota_slot_bytes\":" + String(static_cast<unsigned long>(otaStorageBytes())) +
       ",\"local_ip\":" + Batch::quoteJson(WiFi.localIP().toString()) +
       ",\"heartbeat_interval_seconds\":" + String((_heartbeatIntervalMs + 999) / 1000) +
-      ",\"library_version\":\"0.11.10\"";
+      ",\"library_version\":\"0.11.11\"";
   if (hasCpuUsage) {
     heartbeatPayload += String(",\"cpu_usage_percent\":") +
         String(static_cast<unsigned>(cpuUsagePercent));
